@@ -10,3 +10,4 @@
     version: "{{ item.version | default(omit) }}"
   with_items: "{{ grafana_plugins }}"
   when: grafana_plugins is defined
+  

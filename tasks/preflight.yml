@@ -7,3 +7,4 @@
     owner: "{{ grafana_container_uid }}"
     group: "{{ grafana_container_gid }}"
     state: directory
+    

@@ -1,7 +1,7 @@
 ---
 
 - name: Wait for grafana port is open to the ansible executor
-  wait_for: 
+  wait_for:
     host: "{{ ansible_default_ipv4.address }}"
     port: "{{ grafana_publish_port }}"
     delay: 10
@@ -14,8 +14,8 @@
     method: GET
     user: "{{ grafana_admin_username }}"
     password: "{{ grafana_admin_password }}"
-    force_basic_auth: yes
-    validate_certs: no
+    force_basic_auth: true
+    validate_certs: false
     status_code: 200
   register: response
   until: response.status == 200
@@ -30,12 +30,12 @@
     org_id: 1
     state: present
     message: Updated by ansible
-    overwrite: yes
+    overwrite: true
     path: "{{ item }}"
   with_fileglob:
     - "{{ inventory_dir }}/resources/grafana/dashboards/*.json"
   delegate_to: localhost
-  ignore_errors: yes
+  ignore_errors: true
 
 - name: Import Datasources
   grafana_datasource:
