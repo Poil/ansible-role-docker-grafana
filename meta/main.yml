@@ -7,6 +7,7 @@ galaxy_info:
   description: Install and configure grafana as a docker container
   license: MIT
   min_ansible_version: 1.4
+  role_name: docker-grafana
   platforms:
     - name: Ubuntu
       versions:
@@ -21,6 +22,11 @@ galaxy_info:
       versions:
         - all
   categories:
+    - system
+    - docker
+    - grafana
+    - monitoring
+  galaxy_tags:
     - system
     - docker
     - grafana
