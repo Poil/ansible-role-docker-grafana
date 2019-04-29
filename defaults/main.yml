@@ -20,9 +20,3 @@ grafana_publish_port: 3000
 grafana_environment_vars:
   GF_SECURITY_ADMIN_USER: "{{ grafana_admin_username }}"
   GF_SECURITY_ADMIN_PASSWORD: "{{ grafana_admin_password }}"
-
-grafana_datasources:
-  - { name: "from_ansible", ds_type: "prometheus", access: "direct", url: "http://192.168.8.41:9090"}
-grafana_plugins:
-  - {}
-  - {name: }
