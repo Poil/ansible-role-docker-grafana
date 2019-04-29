@@ -1,0 +1,33 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: github.com/ppadial
+  description: Install and configure grafana as a docker container
+  license: MIT
+  min_ansible_version: 1.4
+  platforms:
+    - name: Ubuntu
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - all
+    - name: EL
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+  categories:
+    - system
+    - docker
+    - grafana
+    - graphs
+    - monitoring
+    - metrics
+    - presentation
+    - dashboard
+    - alerts
+    - alerting
