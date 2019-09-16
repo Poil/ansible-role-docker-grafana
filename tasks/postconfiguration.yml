@@ -24,7 +24,7 @@
 
 - name: Import dashboards
   grafana_dashboard:
-    grafana_url: http://{{ ansible_default_ipv4.address }}:{{ grafana_publish_port }}
+    grafana_url: "http://{{ ansible_default_ipv4.address }}:{{ grafana_publish_port }}"
     grafana_user: "{{ grafana_admin_username }}"
     grafana_password: "{{ grafana_admin_password }}"
     org_id: 1
@@ -39,7 +39,7 @@
 
 - name: Import Datasources
   grafana_datasource:
-    grafana_url: http://{{ ansible_default_ipv4.address }}:{{ grafana_publish_port }}
+    grafana_url: "http://{{ ansible_default_ipv4.address }}:{{ grafana_publish_port }}"
     grafana_user: "{{ grafana_admin_username }}"
     grafana_password: "{{ grafana_admin_password }}"
     org_id: "{{ item.org | default(1) }}"
