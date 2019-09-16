@@ -3,7 +3,7 @@
 - name: Start the container
   docker_container:
     name: "{{ grafana_container_name }}"
-    image: "{{ grafana_container_image }}:{{ grafana_container_image_tag | default('latest')"
+    image: "{{ grafana_container_image }}:{{ grafana_container_image_tag | default('latest') }}"
     hostname: "{{ grafana_container_hostname }}"
     state: started
     restart_policy: "{{ grafana_container_restart_policy }}"
